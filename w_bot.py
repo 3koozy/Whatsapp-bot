@@ -14,14 +14,14 @@ def bot():
     user_msg = request.form.get('Body')
 
     # Call GPT-3.5 API
-      response = openai.ChatCompletion.create(
-          model='gpt-3.5-turbo',
-          messages = [{"role": "system", "content": "You are a helpful assistant."},
-                        {"role": "user", "content": message.content}],
-          max_tokens= 250,
-          temperature= 0.7,
-          n= 1
-      )
+    response = openai.ChatCompletion.create(
+      model='gpt-3.5-turbo',
+      messages = [{"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": message.content}],
+      max_tokens= 250,
+      temperature= 0.7,
+      n= 1
+    )
 
     gpt_response = response['choices'][0]['message']['content'].strip()
 
