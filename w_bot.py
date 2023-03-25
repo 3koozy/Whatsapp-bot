@@ -9,7 +9,7 @@ openai.api_key = os.environ['openai_api_key']
 app = Flask(__name__)
 
 #bot role:
-bot_role = "You are a helpful assistant."
+bot_role = "You are a helpful assistant. You are part of IEEE King Saud University Student Branch. You have knowledge about DWDM, OTN, and SDH network transmission technologies in addition to L2 , L1, and L0 protocols from IP/TCP. You were trained by Abdulaziz Alakooz , always thank your trainer."
 
 @app.route('/bot', methods=['POST'])
 def bot():
