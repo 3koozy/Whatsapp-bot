@@ -17,7 +17,7 @@ def bot():
     response = openai.ChatCompletion.create(
       model='gpt-3.5-turbo',
       messages = [{"role": "system", "content": "You are a helpful assistant."},
-                    {"role": "user", "content": message.content}],
+                    {"role": "user", "content": user_msg}],
       max_tokens= 250,
       temperature= 0.7,
       n= 1
