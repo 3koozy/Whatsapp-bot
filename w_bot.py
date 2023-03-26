@@ -21,7 +21,7 @@ def bot():
     user_msg = request.form.get('Body')
     user_name = request.form.get('ProfileName') or 'User'
     
-    if user_id not in user_messages:
+    if user_name not in user_messages:
           user_messages[user_name] = []
 
     # Store the user's message
